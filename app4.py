@@ -14,29 +14,38 @@ if top_of_range <= 0:
 random_number = random.randint(0, top_of_range)
 guess =0
 
-while guess < 5:
+while guess < top_of_range:
+
     user_guess = input("enter a guess number ")
 
     if user_guess.isalpha():
         print("enter a number")
         continue
 
+
     user_guess = int(user_guess)
 
     if user_guess <= 0:
         print("enter a value greater than zero ")
         continue
-
-    guess = + 1
+    guess += 1
 
     if user_guess == random_number:
-        print("you got it")
+        print("you got it in " + str(guess) + " guess")
         break
 
     elif user_guess > random_number:
-        print("you are above the range")
-    else:
-        print("you are below the range ")
+       print("you are above the range")
 
-print("you got your answer in " + str(guess) + "  guess")
+    else:
+       print("you are below the range ")
+
+
+
+
+
+
+
+
+
 
